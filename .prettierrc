@@ -1,3 +1,7 @@
 {
-  "singleQuote": true
+  "singleQuote": true,
+  "trailingComma": "all",
+  "[html]": {
+    "parser": "angular"
+  }
 }
