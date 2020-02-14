@@ -22,6 +22,18 @@ export class NavBarComponent implements OnInit {
         name: 'Nav3',
         url: '#',
       },
+      {
+        name: 'Nav4',
+        url: '#',
+      },
+      {
+        name: 'Nav5',
+        url: '#',
+      },
+      {
+        name: 'Nav6',
+        url: '#',
+      },
     ];
   }
 
