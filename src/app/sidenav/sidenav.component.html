@@ -1,5 +1,5 @@
-<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-  <mat-toolbar color="primary" class="example-toolbar">
+<div class="example-container" [class.is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="site-nav-bar">
     <button mat-icon-button (click)="snav.toggle()">
       <mat-icon>menu</mat-icon>
     </button>
@@ -24,7 +24,7 @@
       </mat-nav-list>
     </mat-sidenav>
 
-    <mat-sidenav-content>
+    <mat-sidenav-content class="site-content-wrapper">
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
