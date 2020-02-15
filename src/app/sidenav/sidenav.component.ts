@@ -1,6 +1,8 @@
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Component, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { NavBarItem } from './nav-bar-item/navBarItem';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-sidenav',
@@ -9,7 +11,6 @@ import { NavBarItem } from './nav-bar-item/navBarItem';
 })
 export class SidenavComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
-
   fillerNav = Array.from({ length: 10 }, (_, i) => `Nav Item ${i + 1}`);
 
   navBarItemList: NavBarItem[] = [
@@ -33,7 +34,12 @@ export class SidenavComponent implements OnDestroy {
 
   private mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
+  constructor(
+    library: FaIconLibrary,
+    changeDetectorRef: ChangeDetectorRef,
+    media: MediaMatcher,
+  ) {
+    library.addIcons(faBars);
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this.mobileQueryListener);
