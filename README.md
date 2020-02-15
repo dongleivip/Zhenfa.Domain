@@ -14,13 +14,17 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
+## Publish to ghpages
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+git checkout -b gh-pages
+git push origin gh-pages
+npm install -g angular-cli-ghpages
+ng build --prod --base-href https://[username].github.io/[repo]/
+ngh --dir=dist/[project-name]
+```
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+[Learn more](https://medium.com/code-sketch/how-to-deploy-an-angular-7-app-to-github-pages-9427b609645f)
 
 ## Further help
 
