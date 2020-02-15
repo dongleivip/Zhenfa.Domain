@@ -11,28 +11,20 @@ export class NavBarComponent implements OnInit {
   constructor() {
     this.navBarItemList = [
       {
-        name: 'Nav1',
-        url: '#',
+        name: 'Company Intro',
+        url: 'intro',
       },
       {
-        name: 'Nav2',
-        url: '#',
+        name: 'Products',
+        url: 'products',
       },
       {
-        name: 'Nav3',
-        url: '#',
+        name: 'Certifications',
+        url: 'certification',
       },
       {
-        name: 'Nav4',
-        url: '#',
-      },
-      {
-        name: 'Nav5',
-        url: '#',
-      },
-      {
-        name: 'Nav6',
-        url: '#',
+        name: 'Contact Us',
+        url: 'contacts',
       },
     ];
   }
