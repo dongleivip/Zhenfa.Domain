@@ -13,17 +13,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { ContentModule } from './content/content.module';
-import { ProductSideBarComponent } from './product-side-bar/product-side-bar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavBarItemComponent,
-    ProductSideBarComponent,
-    SidenavComponent,
-  ],
+  declarations: [AppComponent, NavBarItemComponent, SidenavComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
