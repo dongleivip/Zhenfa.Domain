@@ -4,8 +4,10 @@ import { ProductsComponent } from './components/products/products.component';
 import { IntroComponent } from './components/intro/intro.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HotSaleComponent } from './components/hot-sale/hot-sale.component';
 
 const routes: Routes = [
+  { path: '', component: HotSaleComponent },
   { path: 'intro', component: IntroComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'certification', component: CertificationComponent },

@@ -11,6 +11,7 @@ import { NavBarItemComponent } from './sidenav/nav-bar-item/nav-bar-item.compone
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { ContentModule } from './content/content.module';
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -30,6 +31,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatSidenavModule,
     MatToolbarModule,
     FontAwesomeModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

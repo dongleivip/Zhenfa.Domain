@@ -1,0 +1,12 @@
+<div class="hot-sale-list">
+  <div
+    fxLayout.xs="column"
+    fxLayout="row wrap"
+    fxLayoutAlign="center center"
+    fxLayoutGap="10px grid"
+  >
+    <div *ngFor="let item of items">
+      <app-product-item [item]="item"></app-product-item>
+    </div>
+  </div>
+</div>
