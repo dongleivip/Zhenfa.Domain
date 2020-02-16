@@ -16,6 +16,7 @@ import { ContentRoutingModule } from './content/content-routing.module';
 import { ProductSideBarComponent } from './product-side-bar/product-side-bar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ContentModule } from './content/content.module';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ContentModule,
     MatButtonModule,
     MatRippleModule,
     MatIconModule,
