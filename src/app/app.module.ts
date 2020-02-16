@@ -12,11 +12,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { ContentRoutingModule } from './content/content-routing.module';
+import { ContentModule } from './content/content.module';
 import { ProductSideBarComponent } from './product-side-bar/product-side-bar.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ContentModule } from './content/content.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +35,6 @@ import { ContentModule } from './content/content.module';
     MatListModule,
     MatSidenavModule,
     MatToolbarModule,
-    ContentRoutingModule,
     FontAwesomeModule,
   ],
   providers: [],
