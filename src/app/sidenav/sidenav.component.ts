@@ -22,6 +22,7 @@ export class SidenavComponent implements OnDestroy, OnInit {
     {
       name: 'Products',
       url: 'products',
+      queryParams: { showAll: true },
     },
     {
       name: 'Certifications',
