@@ -1,17 +1,18 @@
 import { MediaMatcher } from '@angular/cdk/layout';
-import { Component, ChangeDetectorRef, OnDestroy } from '@angular/core';
+import { Component, ChangeDetectorRef, OnDestroy, OnInit } from '@angular/core';
 import { NavBarItem } from './nav-bar-item/navBarItem';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { CategoryService } from '../category.service';
 
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
 })
-export class SidenavComponent implements OnDestroy {
+export class SidenavComponent implements OnDestroy, OnInit {
   mobileQuery: MediaQueryList;
-  fillerNav = Array.from({ length: 10 }, (_, i) => `Nav Item ${i + 1}`);
+  fillerNav: string[];
 
   navBarItemList: NavBarItem[] = [
     {
@@ -38,11 +39,18 @@ export class SidenavComponent implements OnDestroy {
     library: FaIconLibrary,
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
+    private categoryService: CategoryService,
   ) {
     library.addIcons(faBars);
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this.mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this.mobileQueryListener);
+  }
+
+  ngOnInit(): void {
+    this.categoryService.getCategories().subscribe(categories => {
+      this.fillerNav = categories.map(category => category.name);
+    });
   }
 
   ngOnDestroy(): void {
