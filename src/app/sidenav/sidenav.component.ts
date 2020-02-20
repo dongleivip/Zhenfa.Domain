@@ -16,20 +16,20 @@ export class SidenavComponent implements OnDestroy, OnInit {
 
   navBarItemList: NavBarItem[] = [
     {
-      name: 'Company Intro',
+      name: '公司简介',
       url: 'intro',
     },
     {
-      name: 'Products',
+      name: '供应产品',
       url: 'products',
       queryParams: { showAll: true },
     },
     {
-      name: 'Certifications',
+      name: '荣誉资质',
       url: 'certification',
     },
     {
-      name: 'Contact Us',
+      name: '联系我们',
       url: 'contacts',
     },
   ];
