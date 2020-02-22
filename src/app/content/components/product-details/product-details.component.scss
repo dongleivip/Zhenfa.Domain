@@ -1,0 +1,15 @@
+.product-details-content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 40px;
+}
+
+.product-details-content img {
+  max-width: 500px;
+  margin: auto;
+}
+
+.product-details-content p {
+  text-indent: 2em;
+  color: darkgray;
+}
