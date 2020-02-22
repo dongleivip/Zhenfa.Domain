@@ -1,0 +1,6 @@
+<p>product-details works!</p>
+
+<div *ngIf="product$ | async as product">
+  <h3>{{ product.name }}</h3>
+  <div>Id: {{ product.productId }}</div>
+</div>

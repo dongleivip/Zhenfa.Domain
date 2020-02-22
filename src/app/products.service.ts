@@ -16,6 +16,12 @@ export class ProductsService {
     return this.http.get<ProductItem[]>(this.productsUrl);
   }
 
+  getProduct(id: number): Observable<ProductItem> {
+    return this.http
+      .get<ProductItem[]>(this.productsUrl)
+      .pipe(map(response => response.filter(p => p.productId === id)[0]));
+  }
+
   getHotSaleProducts(): Observable<ProductItem[]> {
     return this.http
       .get<ProductItem[]>(this.productsUrl)

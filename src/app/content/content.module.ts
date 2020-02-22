@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ProductItemComponent } from './components/product-item/product-item.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ProductItemComponent } from './components/product-item/product-item.com
     CertificationComponent,
     ContactsComponent,
     ProductItemComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     CommonModule,
