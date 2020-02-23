@@ -1,11 +1,11 @@
-<div
-  fxLayout="column"
-  fxLayoutAlign="center center"
-  *ngIf="product$ | async as product"
->
-  <h3>{{ product.name }}</h3>
-  <div class="product-details-content">
-    <img src="{{ product.imageUrl }}" />
-    <p>Waiting for content...</p>
-  </div>
-</div>
+<mat-card class="product-details" *ngIf="product$ | async as product">
+  <mat-card-header class="product-details-header">
+    <mat-card-title>{{ product.name }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="{{ product.imageUrl }}" alt="{{ product.name }}" />
+  <mat-card-content class="product-details-content">
+    <p>
+      To be continued...
+    </p>
+  </mat-card-content>
+</mat-card>

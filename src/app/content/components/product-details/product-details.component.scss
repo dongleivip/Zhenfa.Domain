@@ -1,15 +1,29 @@
-.product-details-content {
+.product-details {
   display: flex;
   flex-direction: column;
-  padding: 10px 40px;
+  margin: 0 10px;
+  min-height: 50vh;
 }
 
-.product-details-content img {
+.product-details-header {
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.mat-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.product-details img {
   max-width: 500px;
   margin: auto;
+  border-radius: 4px;
 }
 
-.product-details-content p {
+.product-details-content {
+  margin-top: 40px;
+  font-size: 1.2rem;
+  color: #444;
   text-indent: 2em;
-  color: darkgray;
 }
