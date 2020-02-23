@@ -3,7 +3,7 @@
     <button mat-icon-button (click)="snav.toggle()">
       <fa-icon [icon]="['fas', 'bars']" size="lg"></fa-icon>
     </button>
-    <h2>西安宸丰盛贸易有限公司</h2>
+    <button mat-button [routerLink]="['/']" class="site-nav-home-button">西安宸丰盛贸易有限公司</button>
     <ng-container *ngFor="let navBarItem of navBarItemList">
       <app-nav-bar-item [navItem]="navBarItem"></app-nav-bar-item>
     </ng-container>
@@ -18,9 +18,11 @@
       class="side-nav"
     >
       <mat-nav-list>
-        <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">{{
-          nav
-        }}</a>
+        <a mat-list-item routerLink="." *ngFor="let nav of fillerNav">
+          <div style="width: 100%; text-align: center">
+            {{ nav }}
+          </div>
+        </a>
       </mat-nav-list>
     </mat-sidenav>
 
