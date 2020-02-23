@@ -11,6 +11,9 @@
 .side-nav {
   min-width: 200px;
   padding-top: 56px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
 
   @media screen and (min-width: 600px) {
     padding-top: 64px;
@@ -18,7 +21,7 @@
 }
 
 .side-nav-container {
-  height: 100vh;
+  position: static;
   padding-top: 56px;
 
   @media screen and (min-width: 600px) {
