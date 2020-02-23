@@ -9,16 +9,19 @@
 }
 
 .side-nav {
-  padding-top: 64px;
   min-width: 200px;
+  padding-top: 56px;
+
+  @media screen and (min-width: 600px) {
+    padding-top: 64px;
+  }
 }
 
 .side-nav-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  height: 100vh;
+  padding-top: 56px;
 
-  padding-top: 64px;
+  @media screen and (min-width: 600px) {
+    padding-top: 64px;
+  }
 }
