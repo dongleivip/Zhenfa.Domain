@@ -15,7 +15,6 @@
       [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches"
       [opened]="!mobileQuery.matches"
-      fixedTopGap="56"
       class="side-nav"
     >
       <mat-nav-list>
@@ -25,7 +24,7 @@
       </mat-nav-list>
     </mat-sidenav>
 
-    <mat-sidenav-content class="site-content-wrapper">
+    <mat-sidenav-content>
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
