@@ -1,3 +1,4 @@
+import { Category } from './../Category';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Component, ChangeDetectorRef, OnDestroy, OnInit } from '@angular/core';
 import { NavBarItem } from './nav-bar-item/navBarItem';
@@ -12,7 +13,7 @@ import { CategoryService } from '../category.service';
 })
 export class SidenavComponent implements OnDestroy, OnInit {
   mobileQuery: MediaQueryList;
-  fillerNav: string[];
+  categories: Category[];
 
   navBarItemList: NavBarItem[] = [
     {
@@ -50,7 +51,7 @@ export class SidenavComponent implements OnDestroy, OnInit {
 
   ngOnInit(): void {
     this.categoryService.getCategories().subscribe(categories => {
-      this.fillerNav = categories.map(category => category.name);
+      this.categories = categories;
     });
   }
 

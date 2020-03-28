@@ -3,4 +3,5 @@ export interface ProductItem {
   imageUrl: string;
   isHotSale: boolean;
   productId: number;
+  categoryId: number;
 }

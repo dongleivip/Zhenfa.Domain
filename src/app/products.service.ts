@@ -27,4 +27,10 @@ export class ProductsService {
       .get<ProductItem[]>(this.productsUrl)
       .pipe(map(response => response.filter(p => p.isHotSale)));
   }
+
+  getProductsByCategory(cid: number): Observable<ProductItem[]> {
+    return this.http
+      .get<ProductItem[]>(this.productsUrl)
+      .pipe(map(response => response.filter(p => p.categoryId === cid)));
+  }
 }

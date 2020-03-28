@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../../products.service';
 import { ProductItem } from '../product-item/ProductItem';
-import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-import { map, switchMap } from 'rxjs/operators';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import { switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -20,13 +20,24 @@ export class ProductsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.items$ = this.route.queryParamMap.pipe(
-      switchMap((params: ParamMap) =>
-        params.get('showAll') === 'true'
-          ? this.productsService.getProducts()
-          : this.productsService.getHotSaleProducts(),
-      ),
-    );
+    const url = this.route.snapshot.url[0];
+
+    if (url.path === 'category') {
+      this.items$ = this.route.paramMap.pipe(
+        switchMap(params => {
+          const selectedId = +params.get('id');
+          return this.productsService.getProductsByCategory(selectedId);
+        }),
+      );
+    } else {
+      this.items$ = this.route.queryParamMap.pipe(
+        switchMap((params: ParamMap) =>
+          params.get('showAll') === 'true'
+            ? this.productsService.getProducts()
+            : this.productsService.getHotSaleProducts(),
+        ),
+      );
+    }
 
     // this.route.queryParamMap.subscribe(params => {
     //   this.isHotSale = params.get('isHotSale') === 'true';
