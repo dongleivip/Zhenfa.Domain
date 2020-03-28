@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { ContentRoutingModule } from './content-routing.module';
 import { IntroComponent } from './components/intro/intro.component';
 import { ProductsComponent } from './components/products/products.component';
-import { CertificationComponent } from './components/certification/certification.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,7 +16,6 @@ import { ProductDetailsComponent } from './components/product-details/product-de
   declarations: [
     IntroComponent,
     ProductsComponent,
-    CertificationComponent,
     ContactsComponent,
     ProductItemComponent,
     ProductDetailsComponent,
@@ -30,11 +28,6 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     MatGridListModule,
     FlexLayoutModule,
   ],
-  exports: [
-    IntroComponent,
-    ProductsComponent,
-    CertificationComponent,
-    ContactsComponent,
-  ],
+  exports: [IntroComponent, ProductsComponent, ContactsComponent],
 })
 export class ContentModule {}
