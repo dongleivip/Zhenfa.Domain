@@ -1,0 +1,51 @@
+[
+  {
+    "name": "玻璃棉管",
+    "imageUrl": "assets/images/blmg.jpg",
+    "isHotSale": true,
+    "productId": 1,
+    "categoryId": 1
+  },
+  {
+    "name": "橡塑保温管",
+    "imageUrl": "assets/images/xsbwg.jpg",
+    "isHotSale": true,
+    "productId": 2,
+    "categoryId": 2
+  },
+  {
+    "name": "玻璃面板",
+    "imageUrl": "assets/images/blmb.jpg",
+    "isHotSale": true,
+    "productId": 3,
+    "categoryId": 1
+  },
+  {
+    "name": "玻璃棉管2",
+    "imageUrl": "assets/images/blmg.jpg",
+    "isHotSale": false,
+    "productId": 4,
+    "categoryId": 1
+  },
+  {
+    "name": "橡塑保温管2",
+    "imageUrl": "assets/images/xsbwg.jpg",
+    "isHotSale": false,
+    "productId": 5,
+    "categoryId": 2
+  },
+  {
+    "name": "玻璃面板2",
+    "imageUrl": "assets/images/blmb.jpg",
+    "isHotSale": false,
+    "productId": 6,
+    "categoryId": 1
+  },
+  {
+    "name": "其他",
+    "imageUrl": "assets/images/blmb.jpg",
+    "isHotSale": false,
+    "productId": 7,
+    "categoryId": 0
+  }
+]
